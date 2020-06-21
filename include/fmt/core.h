@@ -122,7 +122,7 @@
 #  define FMT_USE_NOEXCEPT 0
 #endif
 
-#if FMT_USE_NOEXCEPT || FMT_HAS_FEATURE(cxx_noexcept) || \
+#if defined(FMT_USE_NOEXCEPT) || FMT_HAS_FEATURE(cxx_noexcept) || \
     (FMT_GCC_VERSION >= 408 && FMT_HAS_GXX_CXX11) || FMT_MSC_VER >= 1900
 #  define FMT_DETECTED_NOEXCEPT noexcept
 #  define FMT_HAS_CXX11_NOEXCEPT 1
